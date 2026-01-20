@@ -28,6 +28,16 @@
       "description": "Analyze Asana tasks for implementers. Extracts requirements, flags unclear items, provides actionable steps. Requires Asana MCP.",
       "version": "1.0.0",
       "strict": true
+    },
+    {
+      "name": "handle-mr-feedback",
+      "source": {
+        "source": "local",
+        "path": "skills/handle-mr-feedback"
+      },
+      "description": "Analyze GitLab MR review comments, validate against code with subagents, let user select items, and create implementation plan. Requires glab CLI.",
+      "version": "1.0.0",
+      "strict": true
     }
   ]
 }

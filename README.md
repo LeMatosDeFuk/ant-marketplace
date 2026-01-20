@@ -11,34 +11,25 @@
 3. Select **"+ Add Marketplace"**
 4. Enter: `LeMatosDeFuk/lematodefuk-marketplace`
 5. Press Enter to add marketplace
+6. Install the plugin: `/plugin install ant@ant-marketplace`
 
 ## Available Skills
 
-| Plugin | Command | Description |
-|--------|---------|-------------|
-| `ant:google-docs` | `/ant:google-docs` | Read and extract content from Google Docs |
-| `ant:asana-task-analyzer` | `/ant:asana-task-analyzer` | Analyze Asana tasks for implementers |
-| `ant:handle-mr-feedback` | `/ant:handle-mr-feedback` | Handle GitLab MR review feedback |
-
-## Install Skills
-
-```bash
-/plugin install ant:google-docs@ant-marketplace
-/plugin install ant:asana-task-analyzer@ant-marketplace
-/plugin install ant:handle-mr-feedback@ant-marketplace
-```
+| Command | Description |
+|---------|-------------|
+| `/ant:google-docs` | Read and extract content from Google Docs |
+| `/ant:asana-task-analyzer` | Analyze Asana tasks for implementers |
+| `/ant:handle-mr-feedback` | Handle GitLab MR review feedback |
 
 ## Update
 
 ```bash
-/plugin update ant:google-docs
-/plugin update ant:asana-task-analyzer
-/plugin update ant:handle-mr-feedback
+/plugin update ant
 ```
 
 ## Contributing
 
-1. Create a folder in `skills/your-skill-name/` with a `SKILL.md` file
+1. Create a folder in `ant/skills/your-skill-name/` with a `SKILL.md` file
 2. Open a PR
 
 ---

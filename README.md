@@ -40,3 +40,19 @@
 
 1. Create a folder in `skills/your-skill-name/` with a `SKILL.md` file
 2. Open a PR
+
+---
+
+<div align="center">
+
+## Made with <img src="heart.svg" height="18" alt="love"> by (ant)
+
+> Z (WTF) nápadů rodíme (WOW) výsledky.
+
+Jsme full-service digitální agentura ze západu Čech. Už více než 25 let tvoříme projekty, které posouvají hranice. Máme přes 50 expertů a jedno know-how: **dělat věci jinak**.
+
+![25+ let](https://img.shields.io/badge/25+-let-5bffc4?style=flat-square)
+![50+ expertů](https://img.shields.io/badge/50+-expertů-5bffc4?style=flat-square)
+![Plzeň, CZ](https://img.shields.io/badge/Plzeň-CZ-5bffc4?style=flat-square)
+
+</div>

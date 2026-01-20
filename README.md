@@ -30,10 +30,16 @@ After adding the marketplace:
 
 ## Update Skills
 
-Skills auto-update when Claude Code starts, or manually:
+Skills auto-update when Claude Code starts, or manually update all plugins:
 
 ```bash
 /plugin update
+```
+
+Or update a specific plugin:
+
+```bash
+/plugin update handle-mr-feedback@lematodefuk-marketplace
 ```
 
 ## Contributing

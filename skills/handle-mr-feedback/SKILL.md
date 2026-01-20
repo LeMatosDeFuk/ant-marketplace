@@ -29,61 +29,21 @@ Extract:
 
 **Before doing anything else**, you MUST:
 
-1. **Fetch MR details to get the source branch:**
-```bash
-glab api "projects/{URL_ENCODED_PROJECT}/merge_requests/{MR_NUMBER}" --hostname {HOSTNAME} | jq '{source_branch: .source_branch, target_branch: .target_branch}'
-```
+1. **Fetch MR details** to get `source_branch` and `target_branch` using glab API
 
-2. **Find the local repository** by matching git remote URL:
+2. **Find the local repository** that matches the GitLab project:
+   - Check if current working directory has a git remote matching `{project_path}`
+   - If not, search the user's home directory for git repositories with matching remote
+   - Use your tools (Bash, find, etc.) creatively to locate the repo
+   - Match by checking `git remote get-url origin` against the project path
 
-**First, check current working directory:**
-```bash
-# Check if current directory is the matching repo
-remote=$(git remote get-url origin 2>/dev/null)
-if echo "$remote" | grep -q "{project_path}"; then
-  echo "Found: $(pwd)"
-fi
-```
+3. **Checkout the correct branch:**
+   - `git fetch origin`
+   - `git checkout {source_branch}`
+   - `git pull origin {source_branch}`
+   - Verify with `git branch --show-current`
 
-**If not found, search common developer locations:**
-```bash
-# Search common locations for matching git remote
-for base in ~/Sites ~/projects ~/code ~/repos ~/dev ~/workspace ~/src ~; do
-  if [ -d "$base" ]; then
-    for dir in "$base"/*/ "$base"/*/*/; do
-      if [ -d "$dir/.git" ]; then
-        remote=$(git -C "$dir" remote get-url origin 2>/dev/null)
-        if echo "$remote" | grep -q "{project_path}"; then
-          echo "$dir"
-          break 2
-        fi
-      fi
-    done
-  fi
-done
-```
-
-3. **Change to the repository directory** and checkout the branch:
-```bash
-cd {FOUND_REPO_PATH}
-git fetch origin
-git checkout {source_branch}
-git pull origin {source_branch}
-```
-
-4. **Verify** you are on the correct branch:
-```bash
-git branch --show-current
-```
-
-**If repository not found:** Ask user for the path using `AskUserQuestion`:
-```
-"Nenašel jsem lokální repozitář pro {project_path}. Kde je umístěn?"
-
-Options:
-- [Current working directory if it's a git repo]
-- Other (user provides path)
-```
+**If repository not found:** Ask user for the path using `AskUserQuestion`
 
 **IMPORTANT:** All subsequent file operations (reading, editing) must happen in this repository directory!
 

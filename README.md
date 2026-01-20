@@ -4,9 +4,11 @@ Claude Code skills marketplace with auto-update support.
 
 ## Installation
 
-```bash
-/marketplace add github:LeMatosDeFuk/lematodefuk-marketplace
-```
+1. Run `/marketplace add` in Claude Code
+2. Press **Tab** to switch to **"Marketplaces"** tab
+3. Select **"+ Add Marketplace"**
+4. Enter: `github:LeMatosDeFuk/lematodefuk-marketplace`
+5. Press Enter to install
 
 ## Available Skills
 

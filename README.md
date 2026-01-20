@@ -29,7 +29,7 @@
 
 ## Contributing
 
-1. Create a folder in `ant/skills/your-skill-name/` with a `SKILL.md` file
+1. Create a folder in `skills/your-skill-name/` with a `SKILL.md` file
 2. Open a PR
 
 ---

@@ -6,15 +6,19 @@
   },
   "metadata": {
     "description": "(ant) skills for Claude Code",
-    "version": "4.0.0"
+    "version": "5.0.0"
   },
   "plugins": [
     {
       "name": "ant",
-      "source": "./ant",
       "description": "(ant) skills - Google Docs, Asana tasks, GitLab MR feedback",
-      "version": "1.0.0",
-      "strict": true
+      "source": "./",
+      "strict": true,
+      "skills": [
+        "./skills/google-docs",
+        "./skills/asana-task-analyzer",
+        "./skills/handle-mr-feedback"
+      ]
     }
   ]
 }

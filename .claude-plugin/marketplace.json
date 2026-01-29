@@ -26,7 +26,8 @@
         "./skills/frontend-performance",
         "./skills/frontend-responsive",
         "./skills/frontend-semantic-html",
-        "./skills/frontend-typescript"
+        "./skills/frontend-typescript",
+        "./skills/frontend-code-separation"
       ]
     }
   ]
